@@ -52,8 +52,13 @@
             height: 100%;
             display: flex;
             flex-direction: column;
-            padding: 4rem 6rem 0;
+            padding: 4rem 0 0;
             position: relative;
+        }
+        
+        /* Content wrapper with proper margins */
+        .content-wrapper {
+            padding: 0 6rem;
         }
         
         /* Header with logos */
@@ -125,14 +130,14 @@
             height: 100%;
             background-image: url('maqam-slide.jpg');
             background-size: cover;
-            background-position: center bottom;
+            background-position: center top;
             border-radius: 40px 40px 0 0;
         }
         
         /* Tablet styles */
         @media (max-width: 1024px) {
-            .container {
-                padding: 3rem 4rem 0;
+            .content-wrapper {
+                padding: 0 4rem;
             }
             
             .logo-en, .logo-ar {
@@ -155,8 +160,12 @@
                 height: auto;
             }
             
+            .content-wrapper {
+                padding: 0 1.5rem;
+            }
+            
             .container {
-                padding: 3rem 1.5rem 0;
+                padding-top: 3rem;
                 min-height: 100vh;
                 height: auto;
                 background-color: #e8e4dc;
@@ -200,7 +209,7 @@
                 height: 30vh;
                 min-height: 200px;
                 width: 100vw;
-                margin-left: -1.5rem;
+                margin-left: 0;
             }
             
             .pattern {
@@ -210,8 +219,12 @@
         
         /* Small mobile */
         @media (max-width: 480px) {
+            .content-wrapper {
+                padding: 0 1rem;
+            }
+            
             .container {
-                padding: 1.5rem 1rem 0;
+                padding-top: 1.5rem;
             }
             
             .logo-en, .logo-ar {
@@ -224,7 +237,7 @@
             
             .pattern-wrapper {
                 height: 200px;
-                margin-left: -1rem;
+                margin-left: 0;
             }
             
             .pattern {
@@ -235,14 +248,16 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <div class="logo-en">MAQAM</div>
-            <div class="logo-ar">مَقام</div>
-        </div>
-        
-        <div class="tagline-section">
-            <div class="tagline-en">Bringing the Middle<br>East to the world</div>
-            <div class="tagline-ar">روح العرب إلى<br>العالم</div>
+        <div class="content-wrapper">
+            <div class="header">
+                <div class="logo-en">MAQAM</div>
+                <div class="logo-ar">مَقام</div>
+            </div>
+            
+            <div class="tagline-section">
+                <div class="tagline-en">Bringing the Middle<br>East to the world</div>
+                <div class="tagline-ar">روح العرب إلى<br>العالم</div>
+            </div>
         </div>
         
         <div class="pattern-wrapper">
