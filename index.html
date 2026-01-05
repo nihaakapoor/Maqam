@@ -135,6 +135,10 @@
             border-radius: 40px;
         }
         
+        .pattern-mirror {
+            display: none;
+        }
+        
         /* Tablet styles */
         @media (max-width: 1024px) {
             .content-wrapper {
@@ -188,39 +192,57 @@
             }
             
             .tagline-section {
-                flex-direction: column;
-                align-items: center;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
                 gap: 1rem;
                 margin-bottom: 3rem;
             }
             
             .tagline-en {
-                font-size: 1.5rem;
-                max-width: 100%;
-                text-align: center;
+                font-size: 1.3rem;
+                max-width: 48%;
+                text-align: left;
                 margin-bottom: 0;
             }
             
             .tagline-ar {
-                font-size: 1.5rem;
-                max-width: 100%;
-                text-align: center;
+                font-size: 1.3rem;
+                max-width: 48%;
+                text-align: right;
             }
             
             .pattern-wrapper {
                 position: relative;
-                height: 60vh;
-                min-height: 400px;
+                height: auto;
                 width: 100%;
                 margin-left: 0;
                 padding: 0 1.5rem 2rem;
+                display: flex;
+                flex-direction: column;
+                gap: 0;
             }
             
             .pattern {
+                width: 100%;
+                height: 60vh;
+                min-height: 400px;
                 background-position: center center;
                 background-size: contain;
                 background-repeat: no-repeat;
-                border-radius: 30px;
+                border-radius: 30px 30px 0 0;
+            }
+            
+            .pattern-mirror {
+                width: 100%;
+                height: 60vh;
+                min-height: 400px;
+                background-image: url('maqam-slide.jpg');
+                background-position: center center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                transform: scaleY(-1);
+                border-radius: 0 0 30px 30px;
             }
         }
         
@@ -270,6 +292,7 @@
         
         <div class="pattern-wrapper">
             <div class="pattern"></div>
+            <div class="pattern-mirror"></div>
         </div>
     </div>
 </body>
